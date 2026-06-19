@@ -1,0 +1,51 @@
+{
+    "name": "@miklakapi/byteflow",
+    "version": "0.1.0",
+    "description": "Zero-runtime-dependency utilities for byte sizes, rates, and transfer durations.",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "keywords": [
+        "bytes",
+        "filesize",
+        "file-size",
+        "format",
+        "parse",
+        "rate",
+        "duration",
+        "zero-dependencies"
+    ],
+    "author": "Miklakapi",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Miklakapi/byteflow-js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Miklakapi/byteflow-js/issues"
+    },
+    "homepage": "https://github.com/Miklakapi/byteflow-js#readme",
+    "sideEffects": false,
+    "prettier": "@miklakapi/prettier-config",
+    "devDependencies": {
+        "@miklakapi/prettier-config": "^1.1.0",
+        "prettier": "^3.8.4",
+        "typescript": "^6.0.3"
+    }
+}
