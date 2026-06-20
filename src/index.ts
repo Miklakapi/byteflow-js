@@ -21,6 +21,8 @@ export {
     transferredIn,
 } from './rate.js'
 
+export { mustParseSize, parseSize } from './parse-size.js'
+
 export type { RateUnit } from './rate.js'
 
-export { mustParseSize, parseSize } from './parse-size.js'
+export { mustParseRate, parseRate } from './parse-rate.js'
