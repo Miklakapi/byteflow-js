@@ -18,8 +18,12 @@
     ],
     "scripts": {
         "build": "tsc",
+        "check": "tsc --noEmit",
+        "lint": "eslint src test",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "test": "vitest run",
+        "test:watch": "vitest"
     },
     "keywords": [
         "bytes",
@@ -44,8 +48,15 @@
     "sideEffects": false,
     "prettier": "@miklakapi/prettier-config",
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@miklakapi/prettier-config": "^1.1.0",
+        "eslint": "^10.5.0",
         "prettier": "^3.8.4",
-        "typescript": "^6.0.3"
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.61.1",
+        "vitest": "^4.1.9"
+    },
+    "allowScripts": {
+        "fsevents@2.3.3": true
     }
 }
