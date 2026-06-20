@@ -24,7 +24,7 @@ export class Size {
             throw new TypeError('Size value must be a finite number')
         }
 
-        this.value = value
+        this.value = Math.trunc(value)
     }
 
     public bytes(): number {

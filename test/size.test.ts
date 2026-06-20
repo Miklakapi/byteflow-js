@@ -83,4 +83,10 @@ describe('Size', () => {
         expect(() => size(Number.POSITIVE_INFINITY)).toThrow(TypeError)
         expect(() => size(Number.NEGATIVE_INFINITY)).toThrow(TypeError)
     })
+
+    it('truncates fractional bytes', () => {
+        const fileSize = size(1536.9)
+
+        expect(fileSize.bytes()).toBe(1536)
+    })
 })
