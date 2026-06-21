@@ -1,6 +1,6 @@
 {
     "name": "@miklakapi/byteflow",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Zero-runtime-dependency utilities for byte sizes, rates, and transfer durations.",
     "type": "module",
     "main": "./dist/index.js",
