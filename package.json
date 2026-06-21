@@ -17,7 +17,8 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "tsc",
+        "clean": "rm -rf dist",
+        "build": "npm run clean && tsc",
         "check": "tsc --noEmit",
         "lint": "eslint src test",
         "format": "prettier --write .",
