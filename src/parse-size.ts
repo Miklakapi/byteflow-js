@@ -19,6 +19,18 @@ const SIZE_UNITS: Readonly<Record<string, number>> = {
     tib: TiB,
 }
 
+/**
+ * Parses a text value into a Size.
+ *
+ * Supported units are B, byte, bytes, KB, MB, GB, TB, KiB, MiB, GiB and TiB.
+ * Decimal units use base 1000, while binary units use base 1024.
+ * Lowercase unit names are accepted.
+ *
+ * If no unit is provided, the value is treated as bytes.
+ * Fractional byte results are truncated.
+ *
+ * Returns null when the value cannot be parsed.
+ */
 export function parseSize(value: string): Size | null {
     const match = SIZE_PATTERN.exec(value)
 
@@ -44,6 +56,11 @@ export function parseSize(value: string): Size | null {
     return new Size(byteValue)
 }
 
+/**
+ * Parses a text value into a Size.
+ *
+ * Throws TypeError when the value cannot be parsed.
+ */
 export function mustParseSize(value: string): Size {
     const parsedSize = parseSize(value)
 
